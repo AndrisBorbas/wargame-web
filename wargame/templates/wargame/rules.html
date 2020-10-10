@@ -1,5 +1,3 @@
-{% extends 'wargame/base.html' %}
-{% block content %}
-    <h1 class="mb-4">Rules</h1>
-    {{ view.rules_content | safe }}
-{% endblock %}
+{% extends 'wargame/base.html' %} {% block content %}
+<h1 class="mb-4 text-center text-danger">Rules</h1>
+{{ view.rules_content | safe }} {% endblock %}

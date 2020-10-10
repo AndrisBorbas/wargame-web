@@ -1,18 +1,19 @@
-{% extends 'wargame/base.html' %}
-{% block content %}
-    <h1 class="mb-4">About us</h1>
-    <table class="table table-hover">
-        <thead class="thead-light">
-            <tr>
-                <th scope="col">Staff</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for name in view.get_people %}
-                <tr>
-                    <td>{{ name }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+{% extends 'wargame/base.html' %} {% block content %}
+<h1 class="mb-4 text-center text-danger">About us</h1>
+<h2 class="mb-3 text-center">Staff</h2>
+<div class="grid grid-autocol">
+    {% for name in view.get_people %}
+    <tr>
+        <div class="box" title="{{name}}">{{name}}</div>
+    </tr>
+    {% endfor %}
+    <div class="box" title="asjhdajsdaskdhajsdhkajkdhsakjhsdkjahskdas">
+        asjhdajsdaskdhajsdhkajkdhsakjhsdkjahskdas
+    </div>
+    <div class="box">asd</div>
+    <div class="box">asd</div>
+    <div class="box">asd</div>
+    <div class="box">asd</div>
+</div>
+
 {% endblock %}

@@ -115,3 +115,6 @@ ENV/
 
 # Ignore actual config file
 config.yaml
+.vscode/
+
+.prettierrc

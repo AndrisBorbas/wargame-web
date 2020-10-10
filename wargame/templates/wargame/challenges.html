@@ -1,33 +1,31 @@
-{% extends 'wargame/base.html' %}
-{% block content %}
-    <h1>Challenges</h1>
+{% extends 'wargame/base.html' %} {% block content %}
+<h1 class="text-center text-danger">Challenges</h1>
 
-    {% for level in view.challenges_by_level %}
-        <h3>Level {{ level.0 }}</h3>
-        <hr />
+{% for level in view.challenges_by_level %}
+<h3>Level {{ level.0 }}</h3>
+<hr />
 
-        <section id="challenge-list">
-            {% for challenge in level.1 %}
-                <a class="card {% if challenge.solved %}challenge-card{% endif %} my-2" href="{% url 'challenge-details' id=challenge.id %}">
-                    <div class="card-body row">
-                        <div class="col-sm-8">
-                            <h4 class="card-title">{{ challenge.title }}</h4>
-                            <p>
-                                {{ challenge.short_description }}
-                            </p>
-                            <div>
-                                {% for tag in challenge.tags.names %}
-                                    <span class="tag">{{ tag }}</span>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <div class="col-sm-4 challenge-points-container">
-                            <span>${{ challenge.points }}</span>
-                        </div>
-                    </div>
-                </a>
-            {% endfor %}
-        </section>
+<section id="challenge-list">
+    {% for challenge in level.1 %}
+    <a
+        class="card {% if challenge.solved %}challenge-card{% endif %} my-2"
+        href="{% url 'challenge-details' id=challenge.id %}"
+    >
+        <div class="card-body row">
+            <div class="col-sm-8">
+                <h4 class="card-title">{{ challenge.title }}</h4>
+                <p>{{ challenge.short_description }}</p>
+                <div>
+                    {% for tag in challenge.tags.names %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-sm-4 challenge-points-container">
+                <span>${{ challenge.points }}</span>
+            </div>
+        </div>
+    </a>
     {% endfor %}
-
-{% endblock %}
+</section>
+{% endfor %} {% endblock %}

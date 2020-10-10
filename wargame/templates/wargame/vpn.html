@@ -1,5 +1,6 @@
-{% extends 'wargame/base.html' %}
-{% block content %}
-    <h1 class="mb-4">VPN instructions</h1>
-    {{ view.vpn_content | safe }}
+{% extends 'wargame/base.html' %} {% block content %}
+
+<h1 class="mb-4">VPN instructions</h1>
+<div class="table-no-bold">{{ view.vpn_content | safe }}</div>
+
 {% endblock %}
