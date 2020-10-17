@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block bootstrap4_content %}
-    <div class="container mb-3 mt-3">
+    <div class="bg-black border-bottom border-1-half border-color-light mb-3">
         {% include 'wargame_admin/module/admin_nav.html' %}
     </div>
     <div class="container">
@@ -23,8 +23,10 @@
 {% endblock %}
 
 {% block bootstrap4_after_content %}
-    <footer class="footer text-center">
-        <span class="align-middle">© 2019 SecurITeam</span>
+    <footer class="footer text-center d-flex align-items-center justify-content-center">
+        <span class="mr-4">© 2020 SecurITeam</span>
+        <span>design by <span class="footer-schdesign text-white">sch</span><span
+                class="footer-schdesign text-schdesign">design</span></span>
     </footer>
 
     {# This is required, because django-bootstrap does not include jquery by default and the setting to include it does not work #}

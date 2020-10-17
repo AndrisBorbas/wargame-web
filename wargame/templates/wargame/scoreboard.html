@@ -4,7 +4,7 @@
 {% if view.private_scoreboard %}
 <div class="alert alert-warning">The scoreboard is currently hidden.</div>
 {% else %}
-<table class="table table-dark table-striped">
+<table class="table table-dark table-striped table-scoreboard">
     <thead>
         <tr>
             <th style="width: 50px">#</th>
@@ -17,6 +17,7 @@
     </thead>
     <tbody>
         {% for score in view.scores %}
+        <tr class="spacer"></tr>
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ score.username }}</td>
