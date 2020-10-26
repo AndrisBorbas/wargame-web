@@ -152,7 +152,7 @@ Helper classes
 
 .box {
     border-radius: 1000px;
-    background-color: #4e0000;
+    background-color: #991616;
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
     justify-content: center;
@@ -253,4 +253,13 @@ select.form-control:focus {
 
 .table-scoreboard td:last-child {
     border-radius: 0 1000px 1000px 0;
+}
+
+#challenge-list a.card {
+    background-color: #282828 !important;
+}
+
+#challenge-list a.card:hover {
+    background-color: #303030 !important;
+    color: #2499ff !important;
 }
